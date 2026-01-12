@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLMS | AIWithViveka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER (SAME AS ALL PAGES) ================= -->
+<header>
+  <div class="container header-container">
+
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../assets/logo.png" alt="AIWithViveka Logo" style="height:50px;">
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blogs.html">Blogs</a>
+
+      <div class="dropdown">
+        <a href="../topics.html">Topics ▾</a>
+        <div class="dropdown-menu">
+          <a href="agentic-ai.html">Agentic AI</a>
+          <a href="computer-vision.html">Computer Vision</a>
+          <a href="deep-learning.html">Deep Learning</a>
+          <a href="llm.html">LLM</a>
+          <a href="mlops.html">MLOps</a>
+          <a href="machine-learning.html">Machine Learning</a>
+          <a href="ai-news.html">AI News & Trends</a>
+        </div>
+      </div>
+
+      <a href="../experience.html">Experience</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../newsletter.html">Newsletter</a>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="nav-search">
+      <input type="text" id="top-search-input" placeholder="Search..." />
+      <button id="top-search-button">
+        <i class="fa fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<!-- HERO -->
+<section class="hero">
+  <h1>Large Language Models (LLMs)</h1>
+  <p>Prompt engineering, fine-tuning, evaluation, and deployment</p>
+</section>
+
+<!-- CONTENT -->
+<section class="topic-content">
+  <div class="container">
+
+    <!-- CARD 1 -->
+    <div class="content-card">
+      <h2>What Are Large Language Models?</h2>
+
+      <p class="preview">
+        Large Language Models (LLMs) are deep learning models trained on massive
+        text datasets to understand and generate human-like language...
+      </p>
+
+      <div class="full-content">
+        <p>
+          Large Language Models (LLMs) are transformer-based neural networks trained
+          on billions of parameters. They learn linguistic patterns, reasoning
+          capabilities, and contextual understanding by predicting the next token
+          in a sequence.
+        </p>
+        <p>
+          Popular examples include GPT, Claude, Gemini, and LLaMA. These models
+          power chatbots, code assistants, search engines, and autonomous agents.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>#LLM</span>
+        <span>#Transformers</span>
+        <span>#GenerativeAI</span>
+      </div>
+
+      <button class="read-more">Read More</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="content-card">
+      <h2>Prompt Engineering Fundamentals</h2>
+
+      <p class="preview">
+        Prompt engineering is the practice of crafting effective inputs to guide
+        LLM behavior and output quality...
+      </p>
+
+      <div class="full-content">
+        <p>
+          Prompt engineering includes techniques such as zero-shot, few-shot,
+          chain-of-thought prompting, and role prompting.
+        </p>
+        <p>
+          Well-designed prompts can significantly improve accuracy, reasoning,
+          and task performance without modifying model weights.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>#PromptEngineering</span>
+        <span>#FewShot</span>
+        <span>#ChainOfThought</span>
+      </div>
+
+      <button class="read-more">Read More</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="content-card">
+      <h2>LLM Deployment & Evaluation</h2>
+
+      <p class="preview">
+        Deploying LLMs requires careful consideration of latency, cost, safety,
+        and evaluation metrics...
+      </p>
+
+      <div class="full-content">
+        <p>
+          LLM deployment involves inference optimization, caching, model routing,
+          and monitoring. Evaluation focuses on accuracy, hallucination rate,
+          latency, and user satisfaction.
+        </p>
+        <p>
+          Tools like LangSmith, PromptLayer, and OpenTelemetry help track
+          performance in production environments.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>#LLMOps</span>
+        <span>#Deployment</span>
+        <span>#Evaluation</span>
+      </div>
+
+      <button class="read-more">Read More</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>© 2026 AIWithViveka</footer>
+
+<!-- READ MORE SCRIPT -->
+<script>
+  document.querySelectorAll(".read-more").forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".content-card");
+      card.classList.toggle("expanded");
+      button.textContent = card.classList.contains("expanded")
+        ? "Read Less"
+        : "Read More";
+    });
+  });
+</script>

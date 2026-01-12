@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter | AIWithViveka</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    /* Newsletter-specific overrides */
+    .newsletter-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .newsletter-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-section p {
+      font-size: 1rem;
+      color: #b1b1b1;
+      margin-bottom: 30px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input[type="email"] {
+      padding: 12px 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 300px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      padding: 12px 25px;
+      border-radius: 5px;
+      border: none;
+      background-color: #a78bfa;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .newsletter-form button:hover {
+      background-color: #5a32c4;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #b1b1b1;
+      border-top: 1px solid #ffffff10;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="AIWithViveka Logo" style="height:50px;">
+        </a>
+      </div>
+      <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blogs.html">Blogs</a>
+
+      <!-- Topics Dropdown -->
+      <div class="dropdown">
+        <a href="topics.html">Topics ▾</a>
+        <div class="dropdown-menu">
+          <a href="topics/agentic-ai.html">Agentic AI</a>
+          <a href="topics/computer-vision.html">Computer Vision</a>
+          <a href="topics/deep-learning.html">Deep Learning</a>
+          <a href="topics/llm.html">LLM</a>
+          <a href="topics/mlops.html">MLOps</a>
+          <a href="topics/machine-learning.html">Machine Learning</a>
+          <a href="topics/ai-news.html">AI News & Trends</a>
+        </div>
+      </div>
+
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+      <div class="nav-search">
+        <input type="text" id="top-search-input" placeholder="Search..." />
+        <button id="top-search-button"><i class="fa fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="newsletter-section container">
+    <h2>Subscribe for Updates</h2>
+    <p>Stay updated on AI, DevOps, and real-world tech. 
+      Enter your email for exclusive tips, guides, and updates straight to your inbox.</p>
+
+    <form class="newsletter-form" action="#" method="post">
+      <input type="email" name="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    © 2026 AIWithViveka. All rights reserved.
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Search functionality
+    const searchButton = document.getElementById("top-search-button");
+    const searchInput = document.getElementById("top-search-input");
+
+    if (searchButton && searchInput) {
+      searchButton.addEventListener("click", function() {
+        const query = searchInput.value.trim();
+        if (query) {
+          window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
+        }
+      });
+    }
+
+    // Newsletter form
+    const newsletterForm = document.querySelector(".newsletter-form");
+    const newsletterEmail = newsletterForm.querySelector("input[type='email']");
+
+    newsletterForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      const email = newsletterEmail.value.trim();
+      if(email){
+        alert(`Thank you for subscribing with ${email}!`);
+        newsletterEmail.value = "";
+      } else {
+        alert("Please enter a valid email address.");
+      }
+    });
+  </script>
+
+</body>
+</html>

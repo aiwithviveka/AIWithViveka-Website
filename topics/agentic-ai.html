@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agentic AI | AIWithViveka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER (SAME AS ALL PAGES) ================= -->
+<header>
+  <div class="container header-container">
+
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../assets/logo.png" alt="AIWithViveka Logo" style="height:50px;">
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blogs.html">Blogs</a>
+
+      <div class="dropdown">
+        <a href="../topics.html">Topics ▾</a>
+        <div class="dropdown-menu">
+          <a href="agentic-ai.html">Agentic AI</a>
+          <a href="computer-vision.html">Computer Vision</a>
+          <a href="deep-learning.html">Deep Learning</a>
+          <a href="llm.html">LLM</a>
+          <a href="mlops.html">MLOps</a>
+          <a href="machine-learning.html">Machine Learning</a>
+          <a href="ai-news.html">AI News & Trends</a>
+        </div>
+      </div>
+
+      <a href="../experience.html">Experience</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../newsletter.html">Newsletter</a>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="nav-search">
+      <input type="text" id="top-search-input" placeholder="Search..." />
+      <button id="top-search-button">
+        <i class="fa fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <h1>Agentic AI</h1>
+  <p>Autonomous AI agents that plan, reason, and act independently</p>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="topic-content">
+  <div class="container">
+
+    <!-- CARD 1 -->
+    <div class="content-card">
+      <h2>What is Agentic AI?</h2>
+
+      <p class="preview">
+        Agentic AI refers to systems where AI models act as autonomous agents,
+        capable of planning, reasoning, and executing tasks toward goals...
+      </p>
+
+      <div class="full-content">
+        <p>
+          Agentic AI systems combine large language models with memory, tools,
+          and decision-making loops. Unlike traditional AI, agentic systems
+          proactively decide what actions to take.
+        </p>
+        <p>
+          These agents can call APIs, interact with databases, coordinate with
+          other agents, and adapt strategies based on feedback.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>#AgenticAI</span>
+        <span>#AutonomousAgents</span>
+        <span>#AIArchitecture</span>
+      </div>
+
+      <button class="read-more">Read More</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="content-card">
+      <h2>Single-Agent vs Multi-Agent Systems</h2>
+
+      <p class="preview">
+        Agentic AI can be implemented using a single intelligent agent or
+        multiple cooperating agents depending on the problem space...
+      </p>
+
+      <div class="full-content">
+        <p>
+          Single-agent systems handle tasks independently, while multi-agent
+          systems distribute responsibilities across specialized agents.
+        </p>
+        <p>
+          Multi-agent systems enable parallel execution, fault tolerance,
+          negotiation, and collaborative reasoning in complex environments.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>#MultiAgent</span>
+        <span>#Orchestration</span>
+        <span>#DistributedAI</span>
+      </div>
+
+      <button class="read-more">Read More</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="content-card">
+      <h2>Agentic AI in Real-World Systems</h2>
+
+      <p class="preview">
+        Agentic AI is increasingly used in production systems such as DevOps
+        automation, research assistants, and workflow orchestration...
+      </p>
+
+      <div class="full-content">
+        <p>
+          In DevOps, agentic AI can automate incident triage, root cause analysis,
+          and infrastructure optimization.
+        </p>
+        <p>
+          In enterprise environments, agents coordinate across tools to
+          streamline operations, reduce manual effort, and improve reliability.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>#DevOpsAI</span>
+        <span>#AIAgents</span>
+        <span>#Automation</span>
+      </div>
+
+      <button class="read-more">Read More</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>© 2026 AIWithViveka</footer>
+
+<!-- ================= READ MORE SCRIPT ================= -->
+<script>
+  document.querySelectorAll(".read-more").forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".content-card");
+      card.classList.toggle("expanded");
+      button.textContent = card.classList.contains("expanded")
+        ? "Read Less"
+        : "Read More";
+    });
+  });
+</script>
+
+</body>
+</html>

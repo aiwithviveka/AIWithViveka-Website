@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topics | AIWithViveka</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container header-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="AIWithViveka Logo" style="height:50px;">
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blogs.html">Blogs</a>
+
+      <!-- Topics Dropdown -->
+      <div class="dropdown">
+        <a href="topics.html">Topics ▾</a>
+        <div class="dropdown-menu">
+          <a href="topics/agentic-ai.html">Agentic AI</a>
+          <a href="topics/computer-vision.html">Computer Vision</a>
+          <a href="topics/deep-learning.html">Deep Learning</a>
+          <a href="topics/llm.html">LLM</a>
+          <a href="topics/mlops.html">MLOps</a>
+          <a href="topics/machine-learning.html">Machine Learning</a>
+          <a href="topics/ai-news.html">AI News & Trends</a>
+        </div>
+      </div>
+
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+
+    <!-- Search -->
+    <div class="nav-search">
+      <input type="text" id="top-search-input" placeholder="Search..." />
+      <button id="top-search-button">
+        <i class="fa fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <h1>Explore Topics</h1>
+  <p>
+    Deep dives into AI, DevOps, LLMs, MLOps, and modern engineering practices.
+    Click any topic to explore detailed articles and guides.
+  </p>
+</section>
+
+<!-- ================= TOPICS GRID ================= -->
+<section class="grid">
+
+  <div class="card">
+    <h3>Agentic AI</h3>
+    <p>Autonomous agents, workflows, orchestration, and real-world use cases.</p>
+    <a href="topics/agentic-ai.html" style="color:#a78bfa; font-weight:600;">
+      Explore →
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Computer Vision</h3>
+    <p>Image processing, object detection, and vision-based AI systems.</p>
+    <a href="topics/computer-vision.html" style="color:#a78bfa; font-weight:600;">
+      Explore →
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Deep Learning</h3>
+    <p>Neural networks, architectures, and training strategies.</p>
+    <a href="topics/deep-learning.html" style="color:#a78bfa; font-weight:600;">
+      Explore →
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Large Language Models (LLM)</h3>
+    <p>Prompt engineering, fine-tuning, evaluation, and deployment.</p>
+    <a href="topics/llm.html" style="color:#a78bfa; font-weight:600;">
+      Explore →
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>MLOps</h3>
+    <p>Model lifecycle management, CI/CD for ML, monitoring, and governance.</p>
+    <a href="topics/mlops.html" style="color:#a78bfa; font-weight:600;">
+      Explore →
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>AI News & Trends</h3>
+    <p>Latest AI updates, tools, research highlights, and industry movements.</p>
+    <a href="topics/ai-news.html" style="color:#a78bfa; font-weight:600;">
+      Explore →
+    </a>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer style="text-align:center; padding:30px; color:#b1b1b1;">
+  © 2026 AIWithViveka. All rights reserved.
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Search
+  const searchButton = document.getElementById("top-search-button");
+  const searchInput = document.getElementById("top-search-input");
+
+  if (searchButton && searchInput) {
+    searchButton.addEventListener("click", function () {
+      const query = searchInput.value.trim();
+      if (query) {
+        window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

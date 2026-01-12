@@ -1,0 +1,20 @@
+[
+  {
+    "title": "What is Agentic AI?",
+    "date": "January 10, 2026",
+    "author": "Viveka Sharma",
+    "excerpt": "Understand autonomous AI systems and how agentic AI is shaping intelligent workflows.",
+    "categories": ["Agentic AI", "AI Concepts"],
+    "comments": 0,
+    "link": "blog-post.html"
+  },
+  {
+    "title": "ML vs DL vs LLM",
+    "date": "January 12, 2026",
+    "author": "Viveka Sharma",
+    "excerpt": "A clear comparison between Machine Learning, Deep Learning, and Large Language Models for interviews and real-world understanding.",
+    "categories": ["Machine Learning", "Deep Learning", "LLM"],
+    "comments": 0,
+    "link": "blog-post.html"
+  }
+]
