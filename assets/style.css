@@ -492,3 +492,24 @@ footer {
   outline: none;
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.4);
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #a78bfa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  transform: translateX(5px);
+}
