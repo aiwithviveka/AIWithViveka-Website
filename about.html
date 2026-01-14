@@ -59,19 +59,30 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
-  <h1>👋 Hello, I'm <br>Viveka Sharma</h1>
-  <p>
-    Crafting scalable, cloud-native solutions with strong expertise in
-    Python automation, CI/CD pipelines, containerized platforms, and
-    modern DevOps practices across Azure and AWS environments.
-  </p>
+<section class="hero hero-about">
 
-  <p style="margin-top:20px;">
-    <a href="experience.html" style="color:#a78bfa; font-weight:600;">
-      View My Work →
-    </a>
-  </p>
+  <div class="hero-content">
+    <h1 id="typewriter"></h1>
+    <h2 class="hero-title">Senior Operations Engineer | DevOps | SRE</h2>
+
+    <p>
+      Crafting scalable, cloud-native solutions with strong expertise in
+      Python automation, CI/CD pipelines, containerized platforms, and
+      modern DevOps practices across Azure and AWS environments.
+    </p>
+
+    <p style="margin-top:20px;">
+      <a href="experience.html" style="color:#a78bfa; font-weight:600;">
+        View My Work →
+      </a>
+    </p>
+  </div>
+
+  <!-- Floating Image -->
+  <div class="hero-image">
+    <img src="assets/avatar.jpg" alt="Viveka Sharma">
+  </div>
+
 </section>
 
 <!-- ================= STATS ================= -->
@@ -196,6 +207,22 @@
     });
   }
 </script>
+<script>
+  const text = "👋 Hello, I'm Viveka Sharma";
+  const speed = 80;
+  let index = 0;
+
+  function typeWriter() {
+    if (index < text.length) {
+      document.getElementById("typewriter").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  window.addEventListener("load", typeWriter);
+</script>
+
 
 </body>
 </html>

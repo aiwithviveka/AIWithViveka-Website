@@ -166,14 +166,14 @@ header {
    HERO (HOME) — SPACING FIXED
 ================================ */
 .hero {
-  padding: 40px 20px 40px; /* ✅ reduced */
+  padding: 40px 20px 40px;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 2.6rem;
   color: #8b5cf6;
-  margin-top: 0; /* ✅ */
+  margin-top: 0;
 }
 
 .hero p {
@@ -186,16 +186,15 @@ header {
    TOPIC HERO — SPACING FIXED
 ================================ */
 .topic-hero {
-  padding: 28px 20px 32px; /* REDUCED TOP SPACE */
+  padding: 28px 20px 32px;
   text-align: center;
   background: radial-gradient(circle at top, #1a1f3c, #0b1020);
 }
 
-
 .topic-hero h1 {
   font-size: 2.6rem;
   color: #8b5cf6;
-  margin-top: 0; /* ✅ */
+  margin-top: 0;
 }
 
 .topic-hero p {
@@ -243,7 +242,7 @@ header {
 
 .content-card h2 {
   color: #8b5cf6;
-  margin-top: 0; /* ✅ */
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
@@ -288,7 +287,7 @@ header {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 40px;
-  padding: 70px 0; /* ✅ restored */
+  padding: 70px 0;
 }
 
 .contact-form input,
@@ -389,17 +388,18 @@ footer {
   padding: 40px;
   border-radius: 15px;
   border: 1px solid #ffffff10;
-  display: block; /* IMPORTANT: remove flex */
+  display: block;
 }
 
 .contact-form h2 {
   margin-bottom: 25px;
-  text-align: left; /* Align like left column headings */
+  text-align: left;
 }
 
 .contact-form form {
   display: block;
 }
+
 .social-links {
   display: flex;
   align-items: center;
@@ -416,12 +416,13 @@ footer {
 .social-links a:hover {
   color: #ffffff;
 }
+
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   padding: 60px 0;
-  align-items: flex-start; /* KEY FIX */
+  align-items: flex-start;
 }
 
 .contact-form {
@@ -432,7 +433,7 @@ footer {
 }
 
 .contact-form h2 {
-  margin: 0 0 20px 0; /* FIX: removes top shift */
+  margin: 0 0 20px 0;
   font-size: 1.4rem;
   color: var(--accent-color);
 }
@@ -452,12 +453,13 @@ footer {
   color: white;
   box-sizing: border-box;
 }
+
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   padding: 60px 0;
-  align-items: flex-start; /* KEY */
+  align-items: flex-start;
 }
 
 .contact-form button {
@@ -474,20 +476,17 @@ footer {
   box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
 }
 
-/* Hover effect */
 .contact-form button:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #9f7aea, #7c3aed);
   box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
 }
 
-/* Click effect */
 .contact-form button:active {
   transform: translateY(0);
   box-shadow: 0 6px 18px rgba(139, 92, 246, 0.3);
 }
 
-/* Focus (keyboard accessibility) */
 .contact-form button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.4);
@@ -512,4 +511,72 @@ footer {
 .read-more:hover {
   text-decoration: underline;
   transform: translateX(5px);
+}
+/* ================= ABOUT HERO LAYOUT ================= */
+
+.hero-about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding-top: 80px;
+}
+
+/* Left text */
+.hero-content {
+  max-width: 600px;
+}
+
+/* Typewriter cursor */
+#typewriter::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Right floating image */
+.hero-image img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(167, 139, 250, 0.6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes floatImage {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .hero-about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+section {
+  scroll-margin-top: 90px;
+}
+
+.hero-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #cbd5f5;
+  letter-spacing: 0.5px;
 }
