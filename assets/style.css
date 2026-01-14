@@ -596,3 +596,15 @@ section {
   max-height: 260px;
 }
 
+header {
+  height: 90px;
+}
+
+.hero-about {
+  min-height: calc(100vh - 90px);
+  padding-top: 140px;   /* HARD offset for GitHub */
+  padding-bottom: 80px;
+}
+.hero-image {
+  min-height: 260px;
+}
