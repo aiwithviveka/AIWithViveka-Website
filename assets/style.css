@@ -635,3 +635,9 @@ header {
   padding-bottom: 60px;
   align-items: flex-start !important;
 }
+/* FORCE FIX — GitHub Pages cache bust */
+.hero.hero-about {
+  min-height: auto !important;
+  align-items: flex-start !important;
+  padding-top: 20px !important;
+}
