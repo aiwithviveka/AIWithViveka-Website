@@ -608,3 +608,30 @@ header {
 .hero-image {
   min-height: 260px;
 }
+/* Reduce top spacing for About sections */
+.hero:not(.hero-about) {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.hero {
+  padding: 24px 20px 28px;
+}
+.hero h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.hero {
+  padding: 40px 20px;
+}
+
+.hero-about {
+  padding-top: 20px;   /* About-specific adjustment */
+}
+/* FIX: remove top gap on About page */
+.hero-about {
+  min-height: auto !important;   /* 🔥 remove vertical centering space */
+  padding-top: 20px !important;  /* small clean spacing */
+  padding-bottom: 60px;
+  align-items: flex-start !important;
+}
