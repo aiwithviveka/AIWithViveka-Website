@@ -635,3 +635,76 @@ header {
   padding-bottom: 60px;
   align-items: flex-start !important;
 }
+/* FORCE FIX — GitHub Pages cache bust */
+.hero.hero-about {
+  min-height: auto !important;
+  align-items: flex-start !important;
+  padding-top: 20px !important;
+}
+.skills-section {
+  padding: 60px 20px;
+  background: #0b1020;
+  color: #fff;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+.skills-subtitle {
+  text-align: center;
+  margin-top: 10px;
+  color: #9ca3af;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.skill-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.skill-card h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+.skill-item {
+  margin-bottom: 15px;
+}
+
+.skill-item span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background: #1f2937;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #7c4dff, #4fd1ff);
+  border-radius: 6px;
+  transition: width 0.8s ease-in-out;
+}
