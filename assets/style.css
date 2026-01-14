@@ -580,3 +580,19 @@ section {
   color: #cbd5f5;
   letter-spacing: 0.5px;
 }
+.hero-about {
+  min-height: calc(100vh - 90px); /* account for sticky header */
+  padding-top: 120px;             /* pushes content below nav */
+  padding-bottom: 80px;
+  align-items: center;
+}
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image img {
+  max-width: 260px;
+  max-height: 260px;
+}
+
